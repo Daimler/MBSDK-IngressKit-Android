@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">MB Ingress Kit</string>
+    <string name="refresh_token">Refresh token</string>
+    <string name="force_token_refresh">Force token refresh</string>
+    <string name="share_log_file">Share Logfile</string>
+</resources>

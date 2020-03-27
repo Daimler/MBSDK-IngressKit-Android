@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            tools:context=".MainActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_clear_cache"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear cache"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_clear_cache"/>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_register"/>
+
+        <Button
+            android:id="@+id/btn_login_native"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login UC"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_login"/>
+
+        <TextView
+            android:id="@+id/tv_login_started"
+            android:layout_width="wrap_content"
+            android:layout_height="21dp"
+            android:text="Login started"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_send_biometric"/>
+
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="logout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_login_native"/>
+
+        <TextView
+            android:id="@+id/tv_logout_started"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout started"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_login_started"/>
+
+        <Button
+            android:id="@+id/btn_token_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Test TokenTask"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_logout"/>
+
+        <Button
+            android:id="@+id/btn_fetch_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fetch User"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_token_test"/>
+
+        <Button
+            android:id="@+id/btn_cached_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cached User"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_fetch_user"/>
+
+        <Button
+            android:id="@+id/btn_update_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update User"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_cached_user"/>
+
+        <Button
+            android:id="@+id/btn_update_profile_picture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update Profile Pic."
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_update_user"/>
+
+        <Button
+            android:id="@+id/btn_fetch_profile_picture_bitmap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fetch Pic Bitmap"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_fetch_profile_picture_bytes"
+            app:layout_constraintTop_toBottomOf="@id/btn_update_profile_picture"/>
+
+        <Button
+            android:id="@+id/btn_fetch_profile_picture_bytes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fetch Pic Bytes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_fetch_profile_picture_bitmap"
+            app:layout_constraintTop_toBottomOf="@id/btn_update_profile_picture"/>
+
+        <Button
+            android:id="@+id/btn_send_pin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send PIN"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_fetch_profile_picture_bitmap"/>
+
+        <Button
+            android:id="@+id/btn_fetch_countries"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fetch Countries"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_send_pin"/>
+
+        <Button
+            android:id="@+id/btn_fetch_natcon_countries"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fetch Natcon Countries"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_fetch_countries"/>
+
+        <Button
+            android:id="@+id/btn_set_pin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set Pin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_fetch_natcon_countries"/>
+
+        <Button
+            android:id="@+id/btn_change_pin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change Pin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_set_pin"/>
+
+        <Button
+            android:id="@+id/btn_delete_pin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete Pin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_change_pin"/>
+
+        <Button
+            android:id="@+id/btn_reset_pin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reset Pin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_delete_pin"/>
+
+        <Button
+            android:id="@+id/btn_send_biometric"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send Biometric State"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_reset_pin"/>
+
+        <Button
+            android:id="@+id/btn_send_unit_preferences"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update Unit Preferences"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_send_biometric"/>
+
+        <Button
+            android:id="@+id/btn_fetch_profile_fields"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fetch profile fields"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_send_unit_preferences"/>
+
+        <Button
+            android:id="@+id/btn_fetch_ciam_terms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fetch CIAM TOU"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_fetch_profile_fields"/>
+
+        <Button
+            android:id="@+id/btn_fetch_soe_terms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fetch SOE TOU"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_fetch_ciam_terms"/>
+
+        <Button
+            android:id="@+id/btn_fetch_natcon_terms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fetch NATCON TOU"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_fetch_soe_terms"/>
+
+        <Button
+            android:id="@+id/btn_fetch_custom_terms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fetch Custom TOU"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_fetch_natcon_terms"/>
+
+        <Button
+            android:id="@+id/btn_fetch_ldsso_terms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fetch LDSSO TOU"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_fetch_custom_terms"/>
+
+        <Button
+            android:id="@+id/btn_update_ciam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update Ciam ToU"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_fetch_ldsso_terms" />
+
+        <Button
+            android:id="@+id/btn_update_adaption_values"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update adaption values"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_update_ciam"/>
+
+        <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/colorPrimaryDark"
+            android:scaleType="fitCenter"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.25"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,68 @@
+apply plugin: 'com.android.library'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+apply plugin: 'realm-android'
+
+apply from: '../ktlint.gradle'
+
+apply from: '../junit5.gradle'
+
+def FILE_PROVIDER_AUTHORITY = 'com.daimler.mbingresskit.provider'
+
+android {
+    compileSdkVersion compiled_sdk_version
+
+    defaultConfig {
+        minSdkVersion min_sdk_version
+        targetSdkVersion target_sdk_version
+        versionCode 1
+        versionName "1.0"
+
+        manifestPlaceholders = [providerAuthority: FILE_PROVIDER_AUTHORITY]
+
+        buildConfigField 'String', 'PROVIDER_AUTHORITY_SUFFIX', "\"" + FILE_PROVIDER_AUTHORITY + "\""
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding {
+        enabled true
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "com.auth0.android:jwtdecode:$jwt_version"
+    api "com.daimler.mm:MBNetworkKit:$mbnetworkkit_version"
+    api "com.daimler.mm:MBLoggerKit:$mbloggerkit_version"
+    api "com.daimler.mm:MBRealmKit:$mbrealmkit_version"
+    api "com.daimler.mm:MBCommonKit:$mbcommonkit_version"
+
+    testImplementation "org.mockito:mockito-core:$mockito_version"
+    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockito_kotlin_version"
+    testImplementation "com.squareup.okhttp3:mockwebserver:$mock_web_version"
+    testImplementation "org.assertj:assertj-core:$assertJ_version"
+    testImplementation "io.mockk:mockk:$mockk_version"
+    androidTestImplementation "com.android.support.test:runner:$test_runner_version"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:$espresso_version"
+    androidTestImplementation "org.mockito:mockito-android:$mockito_version"
+}
+repositories {
+    mavenCentral()
+}

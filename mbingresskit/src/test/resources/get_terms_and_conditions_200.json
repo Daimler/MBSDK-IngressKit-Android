@@ -1,0 +1,73 @@
+{
+  "Errors": [
+    {
+      "Error": "string",
+      "Subsystem": "string"
+    }
+  ],
+  "SOE": [
+    {
+      "href": "string",
+      "documentId": "string",
+      "version": "string",
+      "position": 0,
+      "displayName": "string",
+      "acceptedLocale": "string",
+      "timeOfAcceptance": 0,
+      "acceptanceState": "ACCEPTED",
+      "isGeneralUserAgreement": true,
+      "checkBoxTextKey": "string",
+      "checkBoxText": "string",
+      "titleText": "string"
+    }
+  ],
+  "CIAM": [
+    {
+      "href": "string",
+      "documentId": "string",
+      "version": "string",
+      "acceptanceState": "ACCEPTED"
+    }
+  ],
+  "CUSTOM": [
+    {
+      "id": "string",
+      "locale": "string",
+      "country": "string",
+      "appId": "string",
+      "version": 0,
+      "category": "string",
+      "displayLocation": "string",
+      "position": 0,
+      "displayName": "string",
+      "implicitConsent": true,
+      "href": "string",
+      "acceptanceState": "ACCEPTED"
+    }
+  ],
+  "NATCON": [
+    {
+      "version": "string",
+      "title": "string",
+      "description": "string",
+      "isMandatory": true,
+      "position": 0,
+      "termsId": "string",
+      "text": "string",
+      "href": "string",
+      "acceptanceState": "ACCEPTED"
+    }
+  ],
+  "LDSSO": [
+    {
+      "id": "string",
+      "locale": "string",
+      "version": "string",
+      "position": 0,
+      "displayName": "string",
+      "implicitConsent": true,
+      "href": "string",
+      "acceptanceState": "ACCEPTED"
+    }
+  ]
+}

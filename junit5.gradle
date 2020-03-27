@@ -1,0 +1,15 @@
+tasks.withType(Test) {
+    useJUnitPlatform()
+    testLogging {
+        events("passed", "skipped", "failed")
+    }
+}
+
+dependencies {
+    testImplementation "org.junit.jupiter:junit-jupiter-params:$junit5Version"
+    testImplementation "org.junit.jupiter:junit-jupiter-api:$junit5Version"
+
+    // this allows us to still run junit4 tests without changing any test code
+    testRuntimeOnly "org.junit.vintage:junit-vintage-engine:$junit5Version"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$junit5Version"
+}
